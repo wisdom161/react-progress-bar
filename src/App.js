@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import ProgressBar from './components/ProgressBar';
 
-
 class App extends Component {
   constructor(props) {
     super(props)
