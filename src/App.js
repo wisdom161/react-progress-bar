@@ -15,19 +15,17 @@ class App extends Component {
   fillBar() {
     let atPercent = 0;
     const interval = setInterval(() => {
-      atPercent++;
+      atPercent += 10;
+      console.log('this is at percent', atPercent)
+      this.setState(() => {
+        return {
+          percentage: atPercent
+        }
+      });
       if (atPercent >= 100) {
         clearInterval(interval);
       }
-    }, 1000)
-
-    this.setState((prevState) => {
-      console.log(atPercent)
-      return {
-        percentage: atPercent
-      }
-    });
-  
+    }, 200)
   }
 
   render() {
